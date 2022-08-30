@@ -1,6 +1,8 @@
 # seq2seq-chatbot
 A sequence2sequence chatbot implementation with TensorFlow.
 
+The models and datsets are uploaded in google drive due to size issues.
+
 ## Chatting with a trained model
 To chat with a trained model from a python console:
 
@@ -51,55 +53,3 @@ For example, to train a new model on the cornell movie dialog dataset with defau
 ```shell
 run train.py --datasetdir=datasets\cornell_movie_dialog
 ```
-
-The result should look like this:
-
-![train](doc_files/train.png "train")
-
-## Visualizing a model in TensorBoard
-[TensorBoard](https://www.tensorflow.org/programmers_guide/summaries_and_tensorboard) is a great tool for visualizing what is going on under the hood when a TensorFlow model is being trained.
-
-To start TensorBoard from a terminal:
-```shell
-tensorboard --logdir=model_dir
-```
-
-Where model_dir is the path to the directory where the model checkpoint file is. For example, to view the trained cornell movie dialog model **trained_model_v1**:
-```shell
-tensorboard --logdir=models\cornell_movie_dialog\trained_model_v1
-```
-
-### Visualize Training
-Coming soon...
-
-### Visualize model graph
-Coming soon...
-
-### Visualize word embeddings
-TensorBoard can project the word embeddings into 3D space by performing a dimensionality reduction technique like PCA or T-SNE, and can allow you to explore how your model has grouped together the words in your vocabulary by viewing nearest neighbors in the embedding space for any word.
-More about word embeddings in TensorFlow and the TensorBoard projector can be found [here](https://www.tensorflow.org/programmers_guide/embedding).
-
-When launching TensorBoard for a model directory and selecting the "Projector" tab, it should look like this:
-![train](doc_files/tensorboard_projector.png "train")
-
-## Adding a new dataset
-Instructions coming soon...
-
-## Dependencies
-The following python packages are used in seq2seq-chatbot:
-(excluding packages that come with Anaconda)
-
-- [TensorFlow](https://www.tensorflow.org/)
-    ```shell
-    pip install --upgrade tensorflow
-    ```
-    For GPU support: [(See here for full GPU install instructions including CUDA and cuDNN)](https://www.tensorflow.org/install/)
-    ```shell
-    pip install --upgrade tensorflow-gpu
-    ```
-
-- [jsonpickle](https://jsonpickle.github.io/)
-    ```shell
-    pip install --upgrade jsonpickle
-    ```
-  
